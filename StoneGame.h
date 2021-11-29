@@ -19,3 +19,5 @@ class StoneGame {
 };
 
 #endif
+
+// random stuff
