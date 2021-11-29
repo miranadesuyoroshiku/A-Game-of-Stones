@@ -1,7 +1,7 @@
 #ifdef _MSC_VER
 #include <Windows.h>
 #else
-#include <ustdlib.h>
+#include <unistd.h>
 #endif
 
 #include "StoneGame.h"
