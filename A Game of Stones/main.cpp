@@ -204,8 +204,8 @@ void ComputerMove(int& stones)
     #ifdef _MSC_VER
         Sleep(10 * 1000);
     #else
-        sleep(10 * 1000000);
-    #endif;
+        usleep(10 * 1);
+    #endif
     if (comp_move == 1)
     {
         cout << "The computer removed " << comp_move << " stone from the pile" << endl;
@@ -276,8 +276,8 @@ void ComputerMoveHard(int& stones)
     #ifdef _MSC_VER
         Sleep(10 * 1000);
     #else
-        sleep(10 * 1000000);
-    #endif;
+        usleep(10 * 1);
+    #endif
     if (comp_move == 1)
     {
         cout << "The computer removed " << comp_move << " stone from the pile" << endl;
