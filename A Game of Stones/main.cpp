@@ -1,7 +1,12 @@
+#ifdef _MSC_VER
+#include <Windows.h>
+#else
+#include <ustdlib.h>
+#endif
+
 #include "StoneGame.h"
 #include <iostream>
 #include <cstdlib>
-#include <unistd.h>
 #include <cmath>
 
 using namespace std;
@@ -196,7 +201,11 @@ void ComputerMove(int& stones)
     int comp_move = 0;
     srand(time(0));
     comp_move = rand() % 3 + 1;
-    usleep(1000000);
+    #ifdef _MSC_VER
+        Sleep(10 * 1000);
+    #else
+        sleep(10 * 1000000);
+    #endif;
     if (comp_move == 1)
     {
         cout << "The computer removed " << comp_move << " stone from the pile" << endl;
@@ -264,7 +273,11 @@ void ComputerMoveHard(int& stones)
 
     }
     //computer decision ends here
-    usleep(1000000);
+    #ifdef _MSC_VER
+        Sleep(10 * 1000);
+    #else
+        sleep(10 * 1000000);
+    #endif;
     if (comp_move == 1)
     {
         cout << "The computer removed " << comp_move << " stone from the pile" << endl;
